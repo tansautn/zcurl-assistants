@@ -1,6 +1,7 @@
 ### User template
 *.zck
 3rdlibs
+composer.lock
 # IntelliJ project files
 .idea
 *.iml
