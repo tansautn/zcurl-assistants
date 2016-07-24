@@ -38,6 +38,4 @@ namespace Zuko\Libs\ZCurlAssistants;
 class Assistants
 {
 
-    
-
 }
