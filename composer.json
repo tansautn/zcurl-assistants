@@ -1,0 +1,39 @@
+{
+    "name": "zuko/curl-assistants",
+    "description" : "This package made for Using , Handling more easily and effectively Curl extension in PHP",
+    "version" : "1.0-dev",
+    "type": "library",
+    "keywords" : ["curl","php curl","php-curl","curl library","curl class"],
+    "license" : "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Zuko",
+            "email": "zuko.pro.vn@gmail.com",
+            "homepage": "http://zuko.pw/",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/tansautn/zcurl-assistants"
+        }
+    ],
+    "require": {
+        "php" : ">=5.6",
+        "ext-curl" : "*",
+        "lib-curl": "*",
+        "zendframework/zend-dom" : "^2.6"
+    },
+    "autoload": {
+        "psr-0" : {
+            "Zuko\\CurlAssistants" : "src"
+        }
+    },
+    "config": {
+        "vendor-dir" : "3rdlibs",
+        "bin-dir" : "bin",
+        "data-dir" : "tmp"
+    }
+}
