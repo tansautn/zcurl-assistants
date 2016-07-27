@@ -338,7 +338,8 @@ class Curl
             $filename = $mixed_filename;
             $fh = fopen($filename, 'wb');
         }
-
+        set_time_limit(0);
+        $this->setTimeout(0);
         $this->setOpt(CURLOPT_FILE, $fh);
         $this->get($url);
         $this->downloadComplete($fh);
@@ -435,6 +436,7 @@ class Curl
      *
      * @access public
      * @param  $opt
+     * @return string[]|string
      */
     public function getInfo($opt)
     {
@@ -649,6 +651,15 @@ class Curl
         $this->setOpt(CURLOPT_USERPWD, $username . ':' . $password);
     }
 
+    /**
+     * set path for CookieFile & CookieJar CURL OPT
+     * @param $path
+     */
+    public function setCookiePath($path)
+    {
+        $this->setCookieJar($path);
+        $this->setCookieFile($path);
+    }
     /**
      * Set Cookie
      *
